@@ -4,6 +4,7 @@ import Bookings from "./pages/Bookings.jsx";
 import ContactUs from "./pages/ContactUs.jsx";
 import Home from "./pages/Home.jsx";
 import Reserve from "./pages/Reserve.jsx";
+import Schedule from "./pages/Schedule.jsx";
 // import Schedule from "./pages/Schedule.jsx";
 import NavBar from "./util/NavBar";
 
@@ -29,6 +30,9 @@ function App() {
           </Route>
           <Route path='/Contact-Us'>
             <ContactUs />
+          </Route>
+          <Route path='/Schedule'>
+            <Schedule />
           </Route>
           <Route absolute path='/'>
             <Home />
