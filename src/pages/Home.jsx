@@ -68,19 +68,24 @@ export default function Home() {
             treehouse- a spacious house built in traditional Kerala architecture
             exclusively with wood and eco friendly materials. This place is a
             kind of sanctum especially for the individuals who seek to get a
-            complete spiritual, physical and mental rejuvenation. Vagamon is
-            famous for its exquisite natural beauty and its exhilarating cool
-            weather. This location is in the village of Plamood which is not yet
-            tainted by the flurries of the town but sprawling in the fringes of
-            pristine Vagamon hill ranges. The resort located in a small hill
-            side surrounded by a slew of luxuriant tea estates, cardamom,
-            pepper, and coffee plantations. Apart from these cultivations, the
-            highlight of Agape eco spiritual resort is the rich habitation of
-            hundreds of variety exotic fruit plants which sprawls in a 3 acre
-            farm. The rare undefiled environment gives the opportunity to
-            experience beautiful tweets of many kinds of indigenous birds, a
-            soft creek which flows through the resort land that renders safe
-            swimming in the unsoiled water.
+            complete spiritual, physical and mental rejuvenation.
+          </p>{" "}
+          <p>
+            Vagamon is famous for its exquisite natural beauty and its
+            exhilarating cool weather. This location is in the village of
+            Plamood which is not yet tainted by the flurries of the town but
+            sprawling in the fringes of pristine Vagamon hill ranges. The resort
+            located in a small hill side surrounded by a slew of luxuriant tea
+            estates, cardamom, pepper, and coffee plantations.
+          </p>
+          <p>
+            {" "}
+            Apart from these cultivations, the highlight of Agape eco spiritual
+            resort is the rich habitation of hundreds of variety exotic fruit
+            plants which sprawls in a 3 acre farm. The rare undefiled
+            environment gives the opportunity to experience beautiful tweets of
+            many kinds of indigenous birds, a soft creek which flows through the
+            resort land that renders safe swimming in the unsoiled water.
           </p>
         </span>
       </Paper>
