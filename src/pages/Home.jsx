@@ -1,6 +1,6 @@
 import React from "react";
 import { createStyles, makeStyles } from "@material-ui/core/styles";
-import { Paper } from "@material-ui/core";
+import { Paper, Fab } from "@material-ui/core";
 // import Carousel from "react-responsive-carousel";
 import Carousel from "../components/ImageCarousel";
 
@@ -29,37 +29,55 @@ const useStyles = makeStyles(() =>
       "margin-left": "auto",
       "margin-right": "auto",
     },
-    pageTitle: {},
+    pageRoot: {
+      display: "flex",
+      alignItems: "center",
+      padding: "10%",
+      gap: "10%",
+    },
+    pageImage: {
+      width: "50%",
+    },
+    fab: {
+      position: "absolute",
+      left: "48%",
+      bottom: "5%",
+    },
   })
 );
 
 export default function Home() {
   const classes = useStyles();
 
+  const scrollToIntro = () => {
+    const element = document.getElementById("Introduction");
+    element.scrollIntoView({ block: "start", behavior: "smooth" });
+  };
+
   return (
     <div className={classes.root}>
-      <Carousel />
-      {/* <Carousel showArrows={true} dynamicHeight={true} width='700px'>
-        <div key='slide1'>
-          <img src='https://images.pexels.com/photos/3740695/pexels-photo-3740695.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260' />
-          <p className='legend'>Legend 1</p>
-        </div>
-        <div key='slide2'>
-          <img src='https://images.pexels.com/photos/3740695/pexels-photo-3740695.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260' />
-          <p className='legend'>Legend 2</p>
-        </div>
-        <div key='slide3'>
-          <img src='https://images.pexels.com/photos/3740695/pexels-photo-3740695.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260' />
-          <p className='legend'>Legend 3</p>
-        </div>
-        <div key='slide4'>
-          <img src='https://images.pexels.com/photos/3740695/pexels-photo-3740695.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260' />
-          <p className='legend'>Legend 4</p>
-        </div>
-      </Carousel> */}
-      <Paper variant='elevation' className={classes.page} square>
+      <div style={{ position: "relative" }}>
+        <Carousel />
+        <Fab
+          className={classes.fab}
+          color='primary'
+          aria-label='navigate'
+          variant='extended'
+          onClick={scrollToIntro}
+        >
+          Explore
+        </Fab>
+      </div>
+
+      <Paper
+        id='Introduction'
+        variant='elevation'
+        className={classes.page}
+        square
+      >
         <h1>What is Agape Resort</h1>
         <span>
+          {" "}
           <p>
             A getaway haven in a rustic environment in the Popular Vagamon hill
             ranges, the prominent hill station in Kerala, South India. The
