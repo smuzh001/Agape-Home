@@ -1,7 +1,7 @@
 import React from "react";
 import AboutUs from "./pages/AboutUs.jsx";
 import Bookings from "./pages/Bookings.jsx";
-import ContactUs from "./pages/ContactUs.jsx";
+import Directions from "./pages/Directions.jsx";
 import Home from "./pages/Home.jsx";
 import Reserve from "./pages/Reserve.jsx";
 import Schedule from "./pages/Schedule.jsx";
@@ -28,8 +28,8 @@ function App() {
           <Route path='/Reserve'>
             <Reserve />
           </Route>
-          <Route path='/Contact-Us'>
-            <ContactUs />
+          <Route path='/Directions'>
+            <Directions />
           </Route>
           <Route path='/Schedule'>
             <Schedule />

@@ -146,7 +146,10 @@ export default function Home() {
         </div>
 
         <Paper className={classes.ContactSection} elevation={false}>
-          <ContactCard />
+          <a href="#" id="ContactUs">
+
+          </a>
+          <ContactCard  />
         </Paper>
       </Paper>
     </div>

@@ -2,6 +2,7 @@ import React from "react";
 import { createStyles, makeStyles } from "@material-ui/core/styles";
 import AgapeBanner from "../assets/AgapeBanner.jpg";
 import { Button } from "@material-ui/core";
+// import { useHistory } from "react-router-dom";
 // import MenuIcon from "@material-ui/icons/Menu";
 import {
   AppBar,
@@ -40,8 +41,18 @@ const useStyles = makeStyles((theme) =>
 
 export default function NavBar() {
   const classes = useStyles();
+  // let history = useHistory();
   // const preventDefault = (event) =>
   //   event.preventDefault();
+
+  // const scrollToComponent = (id, history) => {
+  //   if(window.location.pathname !== '/'){
+  //     history.push(`/#${id}`); 
+  //   }
+  //   else{
+  //     document.getElementById(id).scrollIntoView({behavior: "smooth", block: 'center'});
+  //   }
+  // }
 
   return (
     <div className={classes.root}>
@@ -70,13 +81,18 @@ export default function NavBar() {
                 Sessions
               </Link>
             </Typography>
-            <Typography variant='body1'>
+            {/* <Typography variant='body1'>
               <Link href='/Bookings' className={classes.link} color='inherit'>
                 Bookings
               </Link>
+            </Typography> */}
+            <Typography variant='body1'>
+              <Link href='/Directions' className={classes.link} color='inherit'>
+                Directions
+              </Link>
             </Typography>
             <Typography variant='body1'>
-              <Link href='/Contact-Us' className={classes.link} color='inherit'>
+              <Link href='/#ContactUs' className={classes.link} color='inherit'>
                 Contact Us
               </Link>
             </Typography>
