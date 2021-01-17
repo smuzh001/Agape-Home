@@ -1,6 +1,7 @@
 import React from "react";
 import { createStyles, makeStyles } from "@material-ui/core/styles";
-
+import AgapeBanner from "../assets/AgapeBanner.jpg";
+import { Button } from "@material-ui/core";
 // import MenuIcon from "@material-ui/icons/Menu";
 import {
   AppBar,
@@ -14,9 +15,14 @@ const useStyles = makeStyles((theme) =>
   createStyles({
     root: {
       flexGrow: 1,
+      display: "flex",
     },
     menuButton: {
       marginRight: theme.spacing(2),
+    },
+    logo: {
+      width: "400px",
+      height: "100px",
     },
     title: {
       flexGrow: 1,
@@ -39,34 +45,38 @@ export default function NavBar() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="sticky">
+      <AppBar position='sticky' color='transparent'>
         <Toolbar>
-          <Typography variant="h6" className={classes.title}>
-            Agape Resort
-          </Typography>
+          <Button>
+            <img
+              className={classes.logo}
+              src={AgapeBanner}
+              alt='company logo'
+            />
+          </Button>
           <span className={classes.linkSection}>
-            <Typography variant="body1">
-              <Link href="/" className={classes.link} color="inherit">
+            <Typography variant='body1'>
+              <Link href='/' className={classes.link} color='inherit'>
                 Home
               </Link>
             </Typography>
-            <Typography variant="body1">
-              <Link href="/About" className={classes.link} color="inherit">
+            <Typography variant='body1'>
+              <Link href='/About' className={classes.link} color='inherit'>
                 About
               </Link>
             </Typography>
-            <Typography variant="body1">
-              <Link href="/Sessions" className={classes.link} color="inherit">
+            <Typography variant='body1'>
+              <Link href='/Sessions' className={classes.link} color='inherit'>
                 Sessions
               </Link>
             </Typography>
-            <Typography variant="body1">
-              <Link href="/Bookings" className={classes.link} color="inherit">
+            <Typography variant='body1'>
+              <Link href='/Bookings' className={classes.link} color='inherit'>
                 Bookings
               </Link>
             </Typography>
-            <Typography variant="body1">
-              <Link href="/Contact-Us" className={classes.link} color="inherit">
+            <Typography variant='body1'>
+              <Link href='/Contact-Us' className={classes.link} color='inherit'>
                 Contact Us
               </Link>
             </Typography>
