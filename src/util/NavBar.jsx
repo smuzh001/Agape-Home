@@ -76,6 +76,11 @@ export default function NavBar() {
               </Link>
             </Typography>
             <Typography variant='body1'>
+              <Link href='/Schedule' className={classes.link} color='inherit'>
+                Schedule
+              </Link>
+            </Typography>
+            <Typography variant='body1'>
               <Link href='/Contact-Us' className={classes.link} color='inherit'>
                 Contact Us
               </Link>

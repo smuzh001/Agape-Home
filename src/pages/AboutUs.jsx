@@ -1,9 +1,17 @@
 import React from "react";
-import { Card } from "@material-ui/core";
+import { Card, Typography } from "@material-ui/core";
 
 export default function AboutUs() {
   return (
     <section>
+      <Typography
+        align='center'
+        variant='h1'
+        gutterBottom={true}
+        style={{ color: "red" }}
+      >
+        Under Construction
+      </Typography>
       <h1>About Us</h1>
       <p>
         Agape, Eco-Spiritual Resort is a Project as the name suggests that it
