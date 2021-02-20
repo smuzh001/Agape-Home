@@ -1,9 +1,18 @@
 import React from "react";
 import Map from "../components/GoogleMap";
+import { Typography } from "@material-ui/core";
 
 export default function ContactUs() {
   return (
     <div>
+      <Typography
+        align='center'
+        variant='h1'
+        gutterBottom={true}
+        style={{ color: "red" }}
+      >
+        Under Construction
+      </Typography>
       <h1>How to get here</h1>
       <h3>
         With GPS you wwill be brought here withGoogle Maps. Agape ecospiritual
