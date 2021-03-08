@@ -16,23 +16,19 @@ const useStyles = makeStyles((theme) =>
   createStyles({
     root: {
       flexGrow: 1,
-      display: "flex",
-    },
-    menuButton: {
-      marginRight: theme.spacing(2),
+      height: "5vw",
     },
     logo: {
-      width: "400px",
-      height: "100px",
+      width: "40vh",
+      height: "5vw",
     },
     title: {
       flexGrow: 1,
     },
-    linkSection: {
-      width: "auto",
-      display: "flex",
-      justifyContent: "flex-end",
+    appBar: {
+      alignItems: "center",
     },
+
     link: {
       margin: "5px",
     },
@@ -56,52 +52,39 @@ export default function NavBar() {
 
   return (
     <div className={classes.root}>
-      <AppBar position='sticky' color='transparent'>
+      <AppBar position='sticky' color='white' className={classes.appBar}>
         <Toolbar>
-          <Button>
+          <Typography variant='body1' align='center'>
+            <Link href='/' className={classes.link} color='inherit'>
+              Home
+            </Link>
+            <Link href='/About' className={classes.link} color='inherit'>
+              About
+            </Link>
+            <Link href='/Sessions' className={classes.link} color='inherit'>
+              Sessions
+            </Link>
             <img
               className={classes.logo}
               src={AgapeBanner}
               alt='company logo'
             />
-          </Button>
-          <span className={classes.linkSection}>
-            <Typography variant='body1'>
-              <Link href='/' className={classes.link} color='inherit'>
-                Home
-              </Link>
-            </Typography>
-            <Typography variant='body1'>
-              <Link href='/About' className={classes.link} color='inherit'>
-                About
-              </Link>
-            </Typography>
-            <Typography variant='body1'>
-              <Link href='/Sessions' className={classes.link} color='inherit'>
-                Sessions
-              </Link>
-            </Typography>
+
             {/* <Typography variant='body1'>
               <Link href='/Bookings' className={classes.link} color='inherit'>
                 Bookings
               </Link>
             </Typography> */}
-            <Typography variant='body1'>
-              <Link href='/Directions' className={classes.link} color='inherit'>
-                Directions
-              </Link>
-            </Typography>
-            <Typography variant='body1'>
-              <Link href='/Schedule' className={classes.link} color='inherit'>
-                Schedule
-              </Link>
-            </Typography>
-            <Typography variant='body1'>
-              <Link href='/#ContactUs' className={classes.link} color='inherit'>
-                Contact Us
-              </Link>
-            </Typography>
-          </span>
+            <Link href='/Directions' className={classes.link} color='inherit'>
+              Directions
+            </Link>
+            <Link href='/Schedule' className={classes.link} color='inherit'>
+              Schedule
+            </Link>
+            <Link href='/#ContactUs' className={classes.link} color='inherit'>
+              Contact Us
+            </Link>
+          </Typography>
         </Toolbar>
       </AppBar>
     </div>

@@ -1,48 +1,75 @@
 import React from "react";
 import Map from "../components/GoogleMap";
-import { Typography } from "@material-ui/core";
+import { Typography, Grid, Paper } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles({
+  mapContainer: {
+    height: "40vh",
+    width: "90vw",
+  },
+  instruction: {
+    width: "50%",
+    height: "50%",
+  },
+});
 
 export default function ContactUs() {
+  const classes = useStyles();
+
   return (
-    <div>
-      <Typography
-        align='center'
-        variant='h1'
-        gutterBottom={true}
-        style={{ color: "red" }}
-      >
-        Under Construction
-      </Typography>
-      <h1>How to get here</h1>
-      <h3>
-        With GPS you wwill be brought here withGoogle Maps. Agape ecospiritual
-        resort Vagamon
-      </h3>
-      <h4>From Kochi</h4>
-      <p>
-        About 75 kilometers from Kochi to Moolamattam then 25km to Vagamon town.
-        Then 13km to Plammood in the Upputharra route. 400 meters from Plammod
-        Junction via Azhamkala Road.
-      </p>
-      <h4>From Kottayam</h4>
-      <p>
-        About 38km from Kottayam to Eraattupetta. Then 26 km from Erattupetta to
-        Vagamon. 400 meters from Plammod Junction via Azhamkala Road.
-      </p>
-      <h4>From Kattappana</h4>
-      <p>
-        19 km from kattappana to Upputhara. Then about 8 km to Valacoe in the
-        Vagamon route.route. Then 2km to Plamood Junction. 400meters from
-        Plammod Junction via Azhamkala Road.
-      </p>
-      <h4>From Kuttikanam , Thekkady, Kumily Area</h4>
-      <p>
-        Get Upputhara. Then about 8 km to Valacoe in the Vagamon route.Then 2km
-        to Plamood Junction. 400meters from Plammod Junction via Azhamkala Road.
-      </p>
-      <div style={{ height: "500px", width: "500px" }}>
-        <Map />
-      </div>
-    </div>
+    <Grid container direction='column' justify='center' alignItems='center'>
+      <Grid item>
+        <Typography variant='h5' component='h'>
+          How to get here
+        </Typography>
+      </Grid>
+      <Grid item>
+        <div className={classes.mapContainer}>
+          <Map />
+        </div>
+      </Grid>
+      <Grid item>
+        <h3>
+          With GPS you will be brought here with Google Maps. Agape ecospiritual
+          resort Vagamon
+        </h3>
+        <h4>From Kochi</h4>
+        <p>
+          <ul>
+            <li>About 75 kilometers from Kochi to Moolamattam</li>
+            <li>Then 25km to Vagamon town.</li>
+            <li>Then 13km to Plammood in the Upputharra route.</li>
+            <li>400 meters from Plammod Junction via Azhamkala Road</li>
+          </ul>
+        </p>
+        <h4>From Kottayam</h4>
+        <p>
+          <ul>
+            <li>About 38km from Kottayam to Eraattupetta.</li>
+            <li>Then 26 km from Erattupetta to Vagamon.</li>
+            <li>400 meters from Plammod Junction via Azhamkala Road.</li>
+          </ul>
+        </p>
+        <h4>From Kattappana</h4>
+        <p>
+          <ul>
+            <li>19 km from kattappana to Upputhara.</li>
+            <li>Then about 8 km to Valacoe in the Vagamon route.route.</li>
+            <li>Then 2km to Plamood Junction.</li>
+            <li>400 meters from Plammod Junction via Azhamkala Road.</li>
+          </ul>
+        </p>
+        <h4>From Kuttikanam , Thekkady, Kumily Area</h4>
+        <p>
+          <ul>
+            <li>Get Upputhara</li>
+            <li>Then about 8 km to Valacoe in teh Vagamon route.</li>
+            <li>Then 2km to Plamood Junction.</li>
+            <li>400 meters from Plammod Junction via Azhamkala Road</li>
+          </ul>
+        </p>
+      </Grid>
+    </Grid>
   );
 }

@@ -1,9 +1,10 @@
 import React, { Component } from "react";
+import { Grid, Typography, Paper } from "@material-ui/core";
 import { Map, GoogleApiWrapper, Marker, InfoWindow } from "google-maps-react";
 
 const mapStyles = {
-  width: "100%",
-  height: "100%",
+  height: "40vh",
+  width: "90vw",
 };
 
 const location = {
@@ -15,22 +16,29 @@ const location = {
 class MapContainer extends Component {
   render() {
     return (
-      <Map
-        // eslint-disable-next-line react/prop-types
-        google={this.props.google}
-        zoom={14}
-        style={mapStyles}
-        initialCenter={location}
+      <section
+        style={{
+          height: "40vh",
+          width: "90vw",
+        }}
       >
-        <Marker onClick={this.onMarkerClick} name={"Current Location"} />
-        <InfoWindow onClose={this.onInfoWidowClose}></InfoWindow>
-        {/* TODO define location pin. Look at LogRocket example */}
-        {/* <LocationPin
+        <Map
+          // eslint-disable-next-line react/prop-types
+          google={this.props.google}
+          zoom={14}
+          style={mapStyles}
+          initialCenter={location}
+        >
+          <Marker onClick={this.onMarkerClick} name={"Current Location"} />
+          <InfoWindow onClose={this.onInfoWidowClose}></InfoWindow>
+          {/* TODO define location pin. Look at LogRocket example */}
+          {/* <LocationPin
           lat={location.lat}
           lng={location.lng}
           text={location.address}
         /> */}
-      </Map>
+        </Map>
+      </section>
     );
   }
 }
