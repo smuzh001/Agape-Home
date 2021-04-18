@@ -3,7 +3,7 @@ import { Grid, Typography, Paper } from "@material-ui/core";
 import { Map, GoogleApiWrapper, Marker, InfoWindow } from "google-maps-react";
 
 const mapStyles = {
-  height: "40vh",
+  height: "50vh",
   width: "90vw",
 };
 
